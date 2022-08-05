@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+--black: #333333;
+--white: #ffffff;
+--purple: #8057d7;
+--gray: #aaaaaad0;
+}
+
+.stepNum{
+    text-align: center;
+}
+
+.stepsHolder{
+    display: flex;
+    background-color: beige;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    position: relative;
+
+}
+
+.stepCircle{
+    height: 10vw;
+    width: 10vw;    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vw;
+    font-weight: bold;
+    z-index: 100;
+}
+
+.incomplete{
+    border: 2px solid;
+    color: var(--gray);
+    border-color: var(--gray);
+    background-color: inherit;
+}
+
+.complete{
+    color: white;
+    background-color: var(--purple);
+
+
+}
+
+
+
+
+.stepNo
+{
+    text-decoration: none;
+
+}
+
+.stepsOuter
+{
+    display: flex;
+    justify-content: center;
+}
+
+.pgBar
+{
+    position: absolute;
+    top: 50%;
+    left:0px;
+    width: 100%;
+    z-index: 99;
+
+}
+
+
+
+
+.actions {
+display: flex;
+justify-content: center;
+}
+
+.progress-button {
+background: none;
+cursor: pointer;
+border: 1px solid var(--purple);
+font-size: 18px;
+padding: 18px;
+color: var(--purple);
+font-weight: 700;
+margin: 0 10px;
+min-width: 200px;
+border-radius: 8px;
+}
