@@ -3,12 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import ProgressIndicator from './components/steps2';
+import MainForm from './components/mainForm';
+import Page1 from './components/page1';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ProgressIndicator/>
+    <MainForm>
+      <Page1/>
+      <Page1/>
+
+    </MainForm>
   </React.StrictMode>
 );
 

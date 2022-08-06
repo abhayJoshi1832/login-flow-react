@@ -3,41 +3,29 @@ import "./css/steps2.css";
 import Progress_bar from "./progressbar";
 
 
-const steps = [
-    {
-      index: 0,
-      label: "Step 1"
-    },
-    {
-      index: 1,
-      label: "Step 2"
-    },
-    {
-      index: 2,
-      label: "Step 3"
-    },
-    {
-      index: 3,
-      label: "Step 4"
-    },
-  ];
-
-  
-  const ProgressIndicator = () => {
+  const ProgressIndicator = ({totalSteps}) => {
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const steps = [];
+    for(let i= 0; i < totalSteps; i++) steps.push({index: i});
+
+
+
+
     const progress = Math.round((activeIndex + 0.6)*(100/(steps.length-1)));
 
     const stepCircles = steps.map(elem =>{ 
-        return <div key={elem.index}
-        className= {`stepCircle 
-        ${activeIndex >= elem.index ? "complete" : "incomplete"}
-        `}>
-            <div className="stepNo">{elem.index+1}</div>
-            
-            </div>
+        return(
+         <div key={elem.index}
+          className= {`stepCircle 
+          ${activeIndex >= elem.index ? "complete" : "incomplete"}
+          `}>
+            <div className="stepNo">{elem.index+1}</div>            
+          </div>
+        )
     });
 
-    console.log(stepCircles)
+    //console.log(stepCircles)
   
     return (
       <div className="container">

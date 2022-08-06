@@ -13,6 +13,10 @@ font-family: Arial, Helvetica, sans-serif;
 --gray: #aaaaaad0;
 }
 
+.container{
+    width: 100%;
+}
+
 .stepNum{
     text-align: center;
 }
@@ -21,26 +25,36 @@ font-family: Arial, Helvetica, sans-serif;
     display: flex;
     background-color: beige;
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     align-items: center;
     position: relative;
 
 }
 
+/* .stepCircleOuter :not(first-child){
+    z-index: 99;
+    background-color: red;
+} */
+
 .stepCircle{
-    height: 10vw;
-    width: 10vw;    
+    width: 50px;
+    aspect-ratio: 1/1;        
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 5vw;
+    font-size: 10%width;
     font-weight: bold;
-    z-index: 100;
+    z-index: 95;
+    border: 2px solid;
+}
+
+.stepsHolder .stepCircle:not(:first-child){
+    margin-left: 50px;
 }
 
 .incomplete{
-    border: 2px solid;
+    
     color: var(--gray);
     border-color: var(--gray);
     background-color: inherit;
@@ -49,12 +63,7 @@ font-family: Arial, Helvetica, sans-serif;
 .complete{
     color: white;
     background-color: var(--purple);
-
-
 }
-
-
-
 
 .stepNo
 {
@@ -66,6 +75,7 @@ font-family: Arial, Helvetica, sans-serif;
 {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .pgBar
@@ -74,12 +84,9 @@ font-family: Arial, Helvetica, sans-serif;
     top: 50%;
     left:0px;
     width: 100%;
-    z-index: 99;
+    z-index: 90;
 
 }
-
-
-
 
 .actions {
 display: flex;
