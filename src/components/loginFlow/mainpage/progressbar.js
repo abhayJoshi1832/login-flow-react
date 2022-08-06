@@ -1,8 +1,8 @@
 import React from 'react';
-import './css/progressBar.css'
+import '../css/progressBar.css'
 
   
-const Progress_bar = ({progress}) => {
+const ProgressBar = ({progress}) => {
         
     return (
     <div className='barBackground'>
@@ -12,6 +12,6 @@ const Progress_bar = ({progress}) => {
     )
 }
   
-export default Progress_bar;
+export default ProgressBar;
 
 //width: `${Math.min(progress,100)}%`,

@@ -23,7 +23,7 @@ font-family: Arial, Helvetica, sans-serif;
 
 .stepsHolder{
     display: flex;
-    background-color: beige;
+    background-color: white;
     justify-content: space-between;
     width: 100%;
     align-items: center;
@@ -47,6 +47,7 @@ font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     z-index: 95;
     border: 2px solid;
+    
 }
 
 .stepsHolder .stepCircle:not(:first-child){
@@ -57,12 +58,14 @@ font-family: Arial, Helvetica, sans-serif;
     
     color: var(--gray);
     border-color: var(--gray);
-    background-color: inherit;
+    background-color: rgb(241, 238, 238);
 }
 
 .complete{
     color: white;
     background-color: var(--purple);
+    border-color: var(--purple);
+    cursor: pointer;
 }
 
 .stepNo
