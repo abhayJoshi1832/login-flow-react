@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+//
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
+//import './index.css';
+import './custom.scss'
 import Login from './components/loginFlow/mainpage/';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

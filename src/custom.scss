@@ -1,0 +1,33 @@
+/* make the customizations */
+// @import "bootstrap/scss/functions"; 
+// @import "bootstrap/scss/variables";
+// @import "bootstrap/scss/mixins";
+
+
+
+$theme-colors: (
+        "info": tomato,
+        "danger": teal,
+        "primary": #664de5,
+        "grey": #68748d
+
+);
+
+@import "~bootstrap/scss/bootstrap.scss";
+
+/* import bootstrap to set changes */
+
+
+// @import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+
+
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+body{
+    // font-family :'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
+}
+
+

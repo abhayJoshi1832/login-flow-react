@@ -2,11 +2,9 @@
     box-sizing: border-box;
 }
 
-body {
-font-family: Arial, Helvetica, sans-serif;
-}
 
 :root {
+--primary: #664ee4;
 --black: #333333;
 --white: #ffffff;
 --purple: #8057d7;
@@ -28,6 +26,7 @@ font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     align-items: center;
     position: relative;
+    margin-bottom: 20px;
 
 }
 
@@ -43,7 +42,7 @@ font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 10%width;
+    font-size: 12px;
     font-weight: bold;
     z-index: 95;
     border: 2px solid;
@@ -63,8 +62,8 @@ font-family: Arial, Helvetica, sans-serif;
 
 .complete{
     color: white;
-    background-color: var(--purple);
-    border-color: var(--purple);
+    background-color: var(--primary);
+    border-color: var(--primary);
     cursor: pointer;
 }
 

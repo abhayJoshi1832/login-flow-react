@@ -18,7 +18,7 @@ function MainForm(props) {
           <div className="containerInner">
               <div className='heading'>
                   <img src={logo} alt="" />
-                  <h2>Eden</h2>
+                  <h1>Eden</h1>
               </div>
 
               <ProgressIndicator/>

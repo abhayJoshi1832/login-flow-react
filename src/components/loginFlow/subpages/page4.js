@@ -2,12 +2,13 @@ import React, { useContext } from 'react';
 import { useFormData } from '../context/formContext';
 import { PageContext } from '../mainpage/mainForm';
 import Button  from 'react-bootstrap/Button';
+import tick from './success.png'
 import Form from 'react-bootstrap/Form';
-import './page1.css';
+import InputGroup from 'react-bootstrap/InputGroup';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function Page1({pgNo}) {
+function Page4({pgNo}) {
 
   const {activeIndex,setActiveIndex,totalSteps} = useContext(PageContext);
   const {formData,setFormData} = useFormData();
@@ -15,24 +16,15 @@ function Page1({pgNo}) {
 
 
   return (
-    <div>
-    <h2>Welcome! First things first</h2>
-    <p className='text-grey'>You can always change them later</p>
+    <>
+    <img src={tick} alt="" />
+    <h2>Congratulations, Eren!</h2>
+    <p className='text-grey'> You have completed onboarding, you can start using the Eden!</p>
 
-    <Form.Group className="mb-3 w-100" controlId="fullName">
-        <Form.Label>Full Name</Form.Label>
-        <Form.Control type="text" placeholder="Steve Jobs" />
-    </Form.Group>
+    
 
-    <Form.Group className="mb-3 w-100" controlId="displayName">
-        <Form.Label>Display Name</Form.Label>
-        <Form.Control type="text" placeholder="Steve" />
-    </Form.Group>
-
-
-    <Button className='w-100 p-3'
-      onClick={() => setActiveIndex(activeIndex + 1)}>
-        Create Workspace
+    <Button className='w-100 p-3'>
+        Launch Eden
     </Button>
 
     {/* <div className="actions">
@@ -55,8 +47,8 @@ function Page1({pgNo}) {
             
           )}
         </div> */}
-    </div>
+    </>
   )
 }
 
-export default Page1
+export default Page4

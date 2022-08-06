@@ -1,16 +1,16 @@
 import React from 'react';
 import MainForm from './mainForm';
 import Page1 from '../subpages/page1';
+import Page2 from '../subpages/page2';
+import Page4 from '../subpages/page4';
 
 function Login() {
   return (
     <MainForm>
       <Page1 pgNo='1'/>
-      <Page1 pgNo='2'/>
+      <Page2 pgNo='2'/>
       <Page1 pgNo='3'/>
-      <Page1 pgNo='4'/>
-      <Page1 pgNo='5'/>
-      <Page1 pgNo='6'/>
+      <Page4 pgNo='4'/>
     </MainForm>
   )
 }

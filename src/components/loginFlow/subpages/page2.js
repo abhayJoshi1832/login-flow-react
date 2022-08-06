@@ -4,10 +4,11 @@ import { PageContext } from '../mainpage/mainForm';
 import Button  from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './page1.css';
+import InputGroup from 'react-bootstrap/InputGroup';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function Page1({pgNo}) {
+function Page2({pgNo}) {
 
   const {activeIndex,setActiveIndex,totalSteps} = useContext(PageContext);
   const {formData,setFormData} = useFormData();
@@ -15,19 +16,31 @@ function Page1({pgNo}) {
 
 
   return (
-    <div>
-    <h2>Welcome! First things first</h2>
-    <p className='text-grey'>You can always change them later</p>
+    <>
+    <div style={{overflowX: 'visible', display: 'flex', flexDirection:'column' ,alignItems:'center',whiteSpace: 'nowrap'}}>
+      <h2>Let's set up a home for all your work</h2>
+      <p className='text-grey'> You can always create another workspace later</p>
+    </div>
+
+    
 
     <Form.Group className="mb-3 w-100" controlId="fullName">
-        <Form.Label>Full Name</Form.Label>
-        <Form.Control type="text" placeholder="Steve Jobs" />
+        <Form.Label>Workspace Name</Form.Label>
+        <Form.Control type="text" left-addon="sada"placeholder="Eden" />
     </Form.Group>
 
-    <Form.Group className="mb-3 w-100" controlId="displayName">
-        <Form.Label>Display Name</Form.Label>
-        <Form.Control type="text" placeholder="Steve" />
+    <Form.Group className="mb-3 w-100">
+      <Form.Label htmlFor="basic-url"> Workspace URL <span className='text-grey'>(Optional)</span> </Form.Label>
+      <InputGroup className="mb-3">
+        <InputGroup.Text id="basic-addon"> www.eden.com/ </InputGroup.Text>
+        <Form.Control id="basic-url" aria-describedby="basic-addon" />
+      </InputGroup>
     </Form.Group>
+
+
+
+
+
 
 
     <Button className='w-100 p-3'
@@ -55,8 +68,8 @@ function Page1({pgNo}) {
             
           )}
         </div> */}
-    </div>
+    </>
   )
 }
 
-export default Page1
+export default Page2
