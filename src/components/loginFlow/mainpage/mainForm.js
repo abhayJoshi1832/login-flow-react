@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import '../css/mainForm.css';
-import ProgressIndicator from './steps2';
+import './css/mainForm.css';
+import ProgressIndicator from './stepsIndicator';
 import logo from './edenLogo.JPG';
 import { FormDataProvider } from '../context/formContext';
 
@@ -16,17 +16,16 @@ function MainForm(props) {
       
       <div className="containerOuter">
           <div className="containerInner">
+
               <div className='heading'>
                   <img src={logo} alt="" />
                   <h1>Eden</h1>
               </div>
-
               <ProgressIndicator/>
 
               <FormDataProvider>
               {props.children[activeIndex]}
               </FormDataProvider>
-            
           </div>
       </div>
     </PageContext.Provider>

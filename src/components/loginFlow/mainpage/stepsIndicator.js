@@ -1,72 +1,47 @@
-import React, { useState } from "react";
+import React from "react";
 import "./css/stepsIndicator.css";
+import ProgressBar from "./progressbar";
+import { PageContext } from "./mainForm";
+import { useContext } from "react";
 
 
-const steps = [
-  {
-    index: 0,
-    label: "Step 1"
-  },
-  {
-    index: 1,
-    label: "Step 2"
-  },
-  {
-    index: 2,
-    label: "Step 3"
-  },
-  {
-    index: 3,
-    label: "Step 4"
-  }
-];
+  const ProgressIndicator = () => {
+    
+    const {totalSteps, activeIndex, setActiveIndex} = useContext(PageContext);
 
-const ProgressIndicator = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+    const steps = [];
+    for(let i= 0; i < totalSteps; i++) steps.push({index: i});
 
-  return (
-    <div className="container">
+    const progress = Math.round((activeIndex + 0.6)*(100/(steps.length-1)));
 
-
-
-      <ul className="progress-indicator">
-        {steps.map(step => (
-          <li
-            key={step.index}
-            className={`
-              progress-step
-              ${activeIndex === step.index ? "active" : "inactive"}
-              ${activeIndex > step.index-1 ? "complete" : "incomplete"}
-            `}
+    const stepCircles = steps.map(elem =>
+      { 
+        return(
+         <div
+            key={elem.index}
+            className= {`stepCircle 
+            ${activeIndex >= elem.index ? "complete" : "incomplete"}`}            
+            onClick=
+            {
+              (activeIndex > elem.index)?
+              ()=>setActiveIndex(elem.index) :
+              () => {}
+            }
           >
-            <span className="step-number">{step.index + 1}</span>
-            <h3>{step.label}</h3>
-          </li>
-        ))}
-      </ul>
+            <div className="stepNo">{elem.index+1}</div>            
+          </div>
+        )
+      });
 
-
-
-      <div className="actions">
-        {activeIndex > 0 && (
-          <button
-            onClick={() => setActiveIndex(activeIndex - 1)}
-            className="progress-button prev"
-          >
-            Previous Step
-          </button>
-        )}
-        {activeIndex < steps.length - 1 && (
-          <button
-            onClick={() => setActiveIndex(activeIndex + 1)}
-            className="progress-button next"
-          >
-            Next Step
-          </button>
-        )}
-      </div>
-    </div>
-  );
-};
-
-export default ProgressIndicator;
+  
+    return(
+      <div className="stepsHolder">
+          {stepCircles}
+          <div className='pgBar'> <ProgressBar progress={progress}/> </div>
+      </div>          
+   
+    );
+  };
+  
+  export default ProgressIndicator;
+  

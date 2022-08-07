@@ -9,8 +9,8 @@ function Login() {
     <MainForm>
       <Page1 pgNo='1'/>
       <Page2 pgNo='2'/>
-      <Page1 pgNo='3'/>
-      <Page4 pgNo='4'/>
+      <Page1 pgNo='4'/>
+      <Page4 pgNo='3'/>
     </MainForm>
   )
 }
