@@ -4,7 +4,6 @@ import { PageContext } from "./mainForm";
 import { useContext } from "react";
 
   const ProgressBar = ({steps,activeIndex}) => {
-
     const progress = Math.round((activeIndex + 0.6)*(100/(steps.length-1)));
           
     return (
@@ -46,7 +45,6 @@ import { useContext } from "react";
       <div className="stepsHolder">
 
           <StepCirclesFn {...{steps,setActiveIndex,activeIndex}}/>
-
           <div className='pgBar'>
             <ProgressBar {...{steps, activeIndex}}/> 
           </div>

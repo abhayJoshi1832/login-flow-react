@@ -4,9 +4,9 @@ import { PageContext } from '../mainpage/mainForm';
 import Button  from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-function Page1({pgNo}) {
+function Page1() {
 
-  const {activeIndex,setActiveIndex,totalSteps} = useContext(PageContext);
+  const {activeIndex,setActiveIndex} = useContext(PageContext);
   const {formData,handleChange} = useFormData();
 
   return (    

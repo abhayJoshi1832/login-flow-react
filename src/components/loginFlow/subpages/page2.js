@@ -8,9 +8,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-function Page2({pgNo}) {
+function Page2() {
 
-  const {activeIndex,setActiveIndex,totalSteps} = useContext(PageContext);
+  const {activeIndex,setActiveIndex} = useContext(PageContext);
   const {formData,handleChange} = useFormData();
 
   const nextPage = () =>{
@@ -21,18 +21,14 @@ function Page2({pgNo}) {
         hideProgressBar: false,
         });
     }
-    else
-    {
-      setActiveIndex(activeIndex + 1)
-    }
+    else setActiveIndex(activeIndex + 1)
   }
 
 
 
   return (
     <>
-      <h2>Let's set up a home for all your work</h2>
-      
+      <h2>Let's set up a home for all your work</h2>      
       <p className='text-grey'> You can always create another workspace later</p>
       
       <Form.Group className="mb-3 inputField" controlId="workspaceName">
@@ -40,8 +36,6 @@ function Page2({pgNo}) {
           <Form.Control type="text" placeholder="Eden"
           value={formData.workspaceName} onChange={handleChange('workspaceName')} />
       </Form.Group>
-
-
 
       <Form.Group className="mb-3 inputField">
         <Form.Label htmlFor="basic-url">
@@ -54,8 +48,8 @@ function Page2({pgNo}) {
           </InputGroup.Text>
 
           <Form.Control id="basic-url" aria-describedby="basic-addon" placeholder="Example"
-
           value={formData.workspaceUrl} onChange={handleChange('workspaceUrl')} />
+
         </InputGroup>
       </Form.Group>
       

@@ -11,9 +11,6 @@
 --gray: #aaaaaad0;
 }
 
-.container{
-    width: 100%;
-}
 
 .barBackground{
     height: 3px;
@@ -27,9 +24,6 @@
     text-align: right;
 }
 
-.stepNum{
-    text-align: center;
-}
 
 .stepsHolder{
     display: flex;
@@ -40,11 +34,6 @@
     margin-bottom: 20px;
 
 }
-
-/* .stepCircleOuter :not(first-child){
-    z-index: 99;
-    background-color: red;
-} */
 
 .stepCircle{
     width: 50px;
@@ -78,18 +67,6 @@
     cursor: pointer;
 }
 
-.stepNo
-{
-    text-decoration: none;
-
-}
-
-.stepsOuter
-{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
 
 .pgBar
 {
@@ -99,22 +76,4 @@
     width: 100%;
     z-index: 90;
 
-}
-
-.actions {
-display: flex;
-justify-content: center;
-}
-
-.progress-button {
-background: none;
-cursor: pointer;
-border: 1px solid var(--purple);
-font-size: 18px;
-padding: 18px;
-color: var(--purple);
-font-weight: 700;
-margin: 0 10px;
-min-width: 200px;
-border-radius: 8px;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useFormData } from '../context/formContext';
 import Button  from 'react-bootstrap/Button';
-import tick from './success.png';
+import tick from '../assets/success.png';
 
 
-function Page4({pgNo}) {
+function Page4() {
 
   //const {activeIndex,setActiveIndex,totalSteps} = useContext(PageContext);
   const {formData} = useFormData();
