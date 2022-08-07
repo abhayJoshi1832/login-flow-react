@@ -1,43 +1,56 @@
 import React from "react";
 import "./css/stepsIndicator.css";
-import ProgressBar from "./progressbar";
 import { PageContext } from "./mainForm";
 import { useContext } from "react";
+
+  const ProgressBar = ({steps,activeIndex}) => {
+
+    const progress = Math.round((activeIndex + 0.6)*(100/(steps.length-1)));
+          
+    return (
+    <div className='barBackground'>
+      <div className='barFront' style={{width: Math.min(progress,100)+'%'}}>
+      </div>
+    </div>
+    )
+  };
+
+
+  const StepCirclesFn=  ({steps,activeIndex,setActiveIndex}) => steps.map(elem =>
+    { 
+      return(
+       <div
+          key={elem.index}
+          className= {`stepCircle 
+          ${activeIndex >= elem.index ? "complete" : "incomplete"}`}            
+          onClick=
+          {
+            (activeIndex > elem.index)?
+            ()=>setActiveIndex(elem.index) :
+            () => {}
+          }
+        >
+          <div className="stepNo">{elem.index+1}</div>            
+        </div>
+      )
+    });
 
 
   const ProgressIndicator = () => {
     
     const {totalSteps, activeIndex, setActiveIndex} = useContext(PageContext);
-
     const steps = [];
-    for(let i= 0; i < totalSteps; i++) steps.push({index: i});
-
-    const progress = Math.round((activeIndex + 0.6)*(100/(steps.length-1)));
-
-    const stepCircles = steps.map(elem =>
-      { 
-        return(
-         <div
-            key={elem.index}
-            className= {`stepCircle 
-            ${activeIndex >= elem.index ? "complete" : "incomplete"}`}            
-            onClick=
-            {
-              (activeIndex > elem.index)?
-              ()=>setActiveIndex(elem.index) :
-              () => {}
-            }
-          >
-            <div className="stepNo">{elem.index+1}</div>            
-          </div>
-        )
-      });
-
+    for(let i= 0; i < totalSteps; i++) steps.push({index: i});   
   
     return(
       <div className="stepsHolder">
-          {stepCircles}
-          <div className='pgBar'> <ProgressBar progress={progress}/> </div>
+
+          <StepCirclesFn {...{steps,setActiveIndex,activeIndex}}/>
+
+          <div className='pgBar'>
+            <ProgressBar {...{steps, activeIndex}}/> 
+          </div>
+
       </div>          
    
     );

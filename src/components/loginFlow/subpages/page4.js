@@ -1,16 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useFormData } from '../context/formContext';
-import { PageContext } from '../mainpage/mainForm';
 import Button  from 'react-bootstrap/Button';
-import tick from './success.png'
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
+import tick from './success.png';
 
 
 function Page4({pgNo}) {
 
   //const {activeIndex,setActiveIndex,totalSteps} = useContext(PageContext);
-  const {formData,handleChange} = useFormData();
+  const {formData} = useFormData();
 
   return (
     <>
@@ -19,7 +16,8 @@ function Page4({pgNo}) {
       <p className='text-grey text-center'>
         You have completed onboarding, you can start using the Eden!
       </p>
-      <Button onClick={() => alert('POST request can be made with the JSON: '+ JSON.stringify(formData))}>
+      <Button className='nextButton'
+      onClick={() => alert('POST request can be made with the JSON: '+ JSON.stringify(formData))}>
           Launch Eden
       </Button>
     </>

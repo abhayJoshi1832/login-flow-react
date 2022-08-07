@@ -27,7 +27,7 @@ function Page1({pgNo}) {
         value={formData.displayName} onChange={handleChange('displayName')} />
     </Form.Group>
 
-    <Button
+    <Button className='nextButton'
       onClick={() => setActiveIndex(activeIndex + 1)}>
         Create Workspace
     </Button>

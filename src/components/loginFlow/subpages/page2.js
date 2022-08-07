@@ -4,12 +4,28 @@ import { PageContext } from '../mainpage/mainForm';
 import Button  from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Page2({pgNo}) {
 
   const {activeIndex,setActiveIndex,totalSteps} = useContext(PageContext);
   const {formData,handleChange} = useFormData();
+
+  const nextPage = () =>{
+    if (formData.workspaceName === ''){
+      toast.warn('Enter Workspace Name', {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        });
+    }
+    else
+    {
+      setActiveIndex(activeIndex + 1)
+    }
+  }
 
 
 
@@ -43,10 +59,12 @@ function Page2({pgNo}) {
         </InputGroup>
       </Form.Group>
       
-      <Button
-        onClick={() => setActiveIndex(activeIndex + 1)}>
+      <Button className='nextButton'
+        onClick={() => nextPage()}>
           Create Workspace
       </Button>
+
+      <ToastContainer/>
 
     </>
   )
