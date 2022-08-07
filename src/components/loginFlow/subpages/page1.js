@@ -4,7 +4,6 @@ import { PageContext } from '../mainpage/mainForm';
 import Button  from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-
 function Page1({pgNo}) {
 
   const {activeIndex,setActiveIndex,totalSteps} = useContext(PageContext);
@@ -30,7 +29,7 @@ function Page1({pgNo}) {
     <Button className='nextButton'
       onClick={() => setActiveIndex(activeIndex + 1)}>
         Create Workspace
-    </Button>
+    </Button>    
     </>
   )
 }

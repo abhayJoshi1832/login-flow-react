@@ -8,6 +8,7 @@ import Page3 from '../subpages/page3';
 function Login() {
   return (
     <MainForm>
+      
       <Page1 pgNo='1'/>
       <Page2 pgNo='2'/>
       <Page3/>
