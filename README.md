@@ -24,7 +24,7 @@ Project built with React, bootstrap.css & vanilla css;
 
 <br/>
 
-**Some feature screenshots:**
+** Few screenshots:**
 
 Progress indicator when `Mainform` is passed 3 subpages
 
@@ -34,18 +34,12 @@ Progress indicator when `Mainform` is passed 5 subpages
 
 ![](screenshots/whole5.png)
 
-<br/>
-
 #
-
-<br/>
 
 
 ### `2. Simpler page management`
 
 ![](screenshots/pagesSimplified.png)
-
-<br/>
 
 1. Form states managed by `../formContext.js`
 2. Avoids prop drilling
@@ -61,6 +55,7 @@ Progress indicator when `Mainform` is passed 5 subpages
 
 
 `FormContext` exposes custom hook `useFormData` to access & set the Form states across pages:
+
 ![](screenshots/customHook.png)
 
 <br/>
@@ -68,13 +63,10 @@ Progress indicator when `Mainform` is passed 5 subpages
 Sample page component that uses hook `useFormData` to control components, and  `PageContext` for page states
 
 (To generate such subpages, replicate this and add to `defaultFormData` in `formContext.js`)
+
 ![](screenshots/samplePage.png)
 
-<br/>
-
 #
-
-<br/>
 
 
 ### `3. Snackbar notification (bonus feature)`
@@ -87,7 +79,7 @@ Sample page component that uses hook `useFormData` to control components, and  `
 2. Messages on input validation, success, warnings
 
 **Made using `React Toastify`**
-<br/>
+
 
 #
 Inspired from [Eren's dribbble](https://dribbble.com/shots/15669113-Onboarding-Exploration/attachments/7464145?mode=media)
