@@ -17,7 +17,7 @@ function Page4() {
         You have completed onboarding, you can start using the Eden!
       </p>
       <Button className='nextButton'
-      onClick={() => alert('POST request can be made with the JSON: '+ JSON.stringify(formData))}>
+      onClick={() => alert('POST request can be made with the JSON body: '+ JSON.stringify(formData))}>
           Launch Eden
       </Button>
     </>

@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+# Login flow with multiple steps -Abhay
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployed on netlify [here](https://abhays-scalable-login-flow.netlify.app/)
 
-## Available Scripts
+Project built with React, bootstrap.css & vanilla css;
 
-In the project directory, you can run:
+![whole screen shot](screenshots/wholeapp.png)
 
-### `npm start`
+#
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Main Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `1. Progress indicators`
 
-### `npm test`
+![](screenshots/progressSm.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Indicators auto-populate as per the number of pages
+2. Changes color to show progress
+3. Go to previous step with click 
+4. Only completed steps are clickable to go back in steps
+5. Clickable objects show link pointer on hover
 
-### `npm run build`
+**Made using only `HTML & CSS`**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br/>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Some feature screenshots:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Progress indicator when `Mainform` is passed 3 subpages
 
-### `npm run eject`
+![](screenshots/whole3.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Progress indicator when `Mainform` is passed 5 subpages
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![](screenshots/whole5.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br/>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#
 
-## Learn More
+<br/>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### `2. Simpler page management`
 
-### Code Splitting
+![](screenshots/pagesSimplified.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br/>
 
-### Analyzing the Bundle Size
+1. Form states managed by `../formContext.js`
+2. Avoids prop drilling
+3. `Mainform` component generates elements as per children
+4. Easy to disable pages by commenting out in `Login` component
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Made using  `React context`**
 
-### Making a Progressive Web App
+<br/>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Reference screenshots:**
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+`FormContext` exposes custom hook `useFormData` to access & set the Form states across pages:
+![](screenshots/customHook.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<br/>
 
-### `npm run build` fails to minify
+Sample page component that uses hook `useFormData` to control components, and  `PageContext` for page states
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+(To generate such subpages, replicate this and add to `defaultFormData` in `formContext.js`)
+![](screenshots/samplePage.png)
+
+<br/>
+
+#
+
+<br/>
+
+
+### `3. Snackbar notification (bonus feature)`
+
+![](screenshots/Snackbar.png)
+
+<br/>
+
+1. Can be used for disappearing notifications
+2. Messages on input validation, success, warnings
+
+**Made using `React Toastify`**
+<br/>
+
+#
+Inspired from [Eren's dribbble](https://dribbble.com/shots/15669113-Onboarding-Exploration/attachments/7464145?mode=media)
+
