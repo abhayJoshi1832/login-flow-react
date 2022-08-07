@@ -24,7 +24,7 @@ Project built with `React, Bootstrap.css & vanilla Css`
 
 <br/>
 
-** Few screenshots:**
+**Few screenshots:**
 
 Progress indicator when `Mainform` is passed 3 subpages
 
