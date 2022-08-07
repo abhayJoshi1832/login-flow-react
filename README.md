@@ -2,8 +2,7 @@
 
 ## Deployed on netlify [here](https://abhays-scalable-login-flow.netlify.app/)
 
-Project built with React, bootstrap.css & vanilla css;
-
+Project built with `React, Bootstrap.css & vanilla Css`
 ![whole screen shot](screenshots/wholeapp.png)
 
 #
