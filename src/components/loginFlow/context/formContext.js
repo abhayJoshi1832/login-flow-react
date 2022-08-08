@@ -5,7 +5,6 @@ const FormContext = React.createContext();
 /** Change only the below variable: defaultFormData; to add/remove fields in user login data
  * Ensure correct naming for keys - should match with field(input) name used in page 
  */
-
 const defaultFormData ={
     fullName: '',
     displayName: '',
@@ -15,13 +14,15 @@ const defaultFormData ={
     
 };
 
-/**useFromData custom hook is called inside individual pages * 
+
+/**useFromData custom hook is called inside individual pages
  * Exposes formData to access field values
- * Exposes handleChange callback to set field values (see FormDataProvider below for reference) 
+ * Exposes handleChange callback to set field values (see FormDataProvider below) 
  */
 export function useFormData() {
     return useContext(FormContext)
 };
+
 
 /**FormDataProvider is a wrapper; only called inside MainForm component
  * No edits needed here to add/remove fields
