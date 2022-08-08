@@ -6,10 +6,19 @@ import { FormDataProvider } from '../context/formContext';
 
 export const PageContext = React.createContext();
 
-function MainForm(props) {
+
+/**
+ * No need to edit this to add/remove login steps
+ * Parent component of all pages, which  are essentially the steps of the login flow
+ * Exposes PageContext (a React context) to access current page and change pages.
+ * Wraps children with FormDataProvider to utilize useFormData hook inside children
+ * Avoids repeated heading & progress indicator in pages
+ */
+
+function MainForm({children}) {
 
   const [activeIndex, setActiveIndex] = useState(0);  
-  const totalSteps = props.children.length;    
+  const totalSteps = children.length;    
 
   return (
     <PageContext.Provider value ={{activeIndex,setActiveIndex,totalSteps}}>
@@ -25,7 +34,7 @@ function MainForm(props) {
               <ProgressIndicator/>
 
               <FormDataProvider>
-              {props.children[activeIndex]}
+              {children[activeIndex]}
               </FormDataProvider>
           </div>
       </div>

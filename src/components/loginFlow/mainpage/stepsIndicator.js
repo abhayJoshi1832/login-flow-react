@@ -3,6 +3,9 @@ import "./css/stepsIndicator.css";
 import { PageContext } from "./mainForm";
 import { useContext } from "react";
 
+
+  /** Stateless helper component that populates progress bar
+  */
   const ProgressBar = ({steps,activeIndex}) => {
     const progress = Math.round((activeIndex + 0.6)*(100/(steps.length-1)));
           
@@ -14,7 +17,8 @@ import { useContext } from "react";
     )
   };
 
-
+  /** Stateless helper component that populates stylized circles
+   */
   const StepCirclesFn=  ({steps,activeIndex,setActiveIndex}) => steps.map(elem =>
     { 
       return(
@@ -34,6 +38,12 @@ import { useContext } from "react";
       )
     });
 
+
+  /**ProgressIndicator uses values from PageContext to generate output
+   * Completed steps are clickable to go back to them
+   * No edits are needed here to add or remove steps
+   * Only uses CSS & below JSX for styling 
+   */
 
   const ProgressIndicator = () => {
     

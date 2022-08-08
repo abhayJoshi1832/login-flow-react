@@ -4,6 +4,12 @@ import { PageContext } from '../mainpage/mainForm';
 import Button  from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
+
+/**Page component is a single step of the login flow
+ * It uses PageContext (a React context) to go next page etc.
+ * Page component utilizes formData Object & handleChange method to make controlled components
+ * Replicate this component to create custom pages
+ */
 function Page1() {
 
   const {activeIndex,setActiveIndex} = useContext(PageContext);

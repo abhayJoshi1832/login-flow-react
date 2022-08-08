@@ -8,6 +8,7 @@ Project built with `React, Bootstrap.css & vanilla Css`
 
 #
 
+
 ## Main Features
 
 ### `1. Progress indicators`
@@ -16,8 +17,7 @@ Project built with `React, Bootstrap.css & vanilla Css`
 
 1. Indicators auto-populate as per the number of pages
 2. Changes color to show progress
-3. Go to previous step with click 
-4. Only completed steps are clickable to go back in steps
+4. Completed steps are clickable to go back to those steps
 5. Clickable objects show link pointer on hover
 
 **Made using only `HTML & CSS`**
@@ -62,14 +62,22 @@ Progress indicator when `Mainform` is passed 5 subpages
 
 Sample page component that uses hook `useFormData` to control components, and  `PageContext` for page states
 
-(To generate such subpages, replicate this and add to `defaultFormData` in `formContext.js`)
+(To generate such pages, replicate this & add to `defaultFormData` in `formContext.js`)
 
-![](screenshots/samplePage.png)
+<!-- ![](screenshots/samplePage.png) -->
+![](screenshots/page1code.png)
+#
+
+### `3. Mobile friendly`
+
+![](screenshots/mobilefriendly.png)
+
+<br/>
 
 #
 
 
-### `3. Snackbar notification (bonus feature)`
+### `4. Snackbar notification (bonus feature)`
 
 ![](screenshots/Snackbar.png)
 
